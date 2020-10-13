@@ -1,7 +1,4 @@
-# WhereIsMyPlume
-
-* [Homepage](homepage)
-* [![licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+# WhereIsMyPlume [![licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ### Description
 
