@@ -1,0 +1,33 @@
+# =====
+# Build
+# =====
+
+*.pyc
+
+# ===
+# Vim
+# ===
+
+*.vim
+*.swp
+*.swo
+
+# ===========
+# Directories
+# ===========
+
+# Clean some direcories from user input/output data
+# To avoid removing cleaned directories by git, place a README inside them and whitelist them
+
+data/*
+!data/README.md
+
+log/*
+!log/README.md
+
+output/*
+!output/README.md
+
+python/data/*
+!python/data/README.md
+
