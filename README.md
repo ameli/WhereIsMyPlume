@@ -9,31 +9,31 @@ You are on a boat in the middle of nowhere ocean. You lost the treasure map whic
 
 ### Requirements
 
-Matlab 2017a or later with the following toolboxes are required:
+* _Matlab:_ version 2017a or later with the following Matlab toolboxes are required:
 
-* Statistics toolbox
-* Econometrics toolbox
-* Financial toolbox
-* Mapping toolbox
+  * Statistics toolbox
+  * Econometrics toolbox
+  * Financial toolbox
+  * Mapping toolbox
 
-To reproduce the output plots in python (_optional_, you may not need this step), a Jupyter noteook and the following python packages are required:
+* _Python_: (optional, you may not need this step) To reproduce the output plots in python, a Jupyter noteook and the following python packages are required:
 
-* numpy
-* scipy
-* matplotlib
-* basemap
-* matlab engine
-
-You can install these packages, for instance, with anaconda by
-
-    sudo conda install -c conda-forge jupyter numpy scipy matplotlib basemap
-
-and install matlab engine by
-
-    cd matlabroot/extern/engines/python
-    sudo python setup.py install
-
-In the above, `matlabroot` is the directory where Matlab is installed.
+  * numpy
+  * scipy
+  * matplotlib
+  * basemap
+  * matlab engine
+  
+  You can install these packages, for instance, with anaconda by
+  
+      sudo conda install -c conda-forge jupyter numpy scipy matplotlib basemap
+  
+  and install matlab engine for Python by
+  
+      cd matlabroot/extern/engines/python
+      sudo python setup.py install
+  
+  In the above, `matlabroot` is the directory where Matlab is installed.
 
 ### Download the code and data
 
