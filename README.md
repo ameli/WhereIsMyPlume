@@ -22,7 +22,7 @@ Matlab 2017a and later with the following toolbox are required:
 
         git clone https://github.com/ameli/WhereIsMyPlume.git
 
-2. The cloned repository contains the directory `data` which is an empty folder. Download the [actual data files](http://transport.me.berkeley.edu/thredds/fileServer/trajectories/FieldExperiment-2018/data.tar.gz) (650 MB) to replace with empty `data` directory in the repository. You may do so manually or by the following commands:
+2. The cloned repository contains the directory `data` which is an empty folder. Download the [actual data files](http://transport.me.berkeley.edu/thredds/fileServer/trajectories/FieldExperiment-2018/data.tar.gz) (650 MB) to replace with the empty `data` directory in the repository. You may do so either manually or by the following commands:
 
         cd WhereIsMyPlume
         wget http://transport.me.berkeley.edu/thredds/fileServer/trajectories/FieldExperiment-2018/data.tar.gz
@@ -31,11 +31,11 @@ Matlab 2017a and later with the following toolbox are required:
 
 ### Run the code
 
-1. If running Matlab on a server, start Matlab with:
+1. If you are running Matlab on a server, start Matlab with:
 
         matlab -nodekstop -nosplash
 
-2. The main script of the code is `WhereIsMyPlume.m` and accepts a configuration file to configure how the code should run. The configuration. Some sample configuration files can be found in `config` directory. As an example, run the code with the configuration given in `/config/config_subsurface.m` file by
+2. The main script of the code is [`WhereIsMyPlume.m`](https://github.com/ameli/WhereIsMyPlume/blob/master/WhereIsMyPlume.m) and accepts a configuration file to configure how the code should run. Some sample configuration files can be found in `config` directory. As an example, run the code with the configuration given in [`/config/config_subsurface.m`](https://github.com/ameli/WhereIsMyPlume/blob/master/config/config_subsurface.m) file by
 
         cd WhereIsMyPlume
         WhereIsMyPlume 'config_subsurface'
@@ -48,7 +48,7 @@ Matlab 2017a and later with the following toolbox are required:
 
 | Directory/File | Purpose |
 | -------------- | ------- |
-| `/config` | Examples of configuration files are stored here. A configuration file is used as an argument to the main script. |
+| [`/config`](https://github.com/ameli/WhereIsMyPlume/tree/master/config) | Examples of configuration files are stored here. A configuration file is used as an argument to the main script. |
 | `/data` | Includes adcp data, ship tracks, drifter data, and wind data. The user data can be any other directory, provided that the data directory is set in config file. |
 | `/doc` | Documentation files, such as output images. |
 | `/log` | Both input and output `mat` files are stored here. If an input log file exists, the code will use it in the next, otherwise, the code generates a new log file. |
