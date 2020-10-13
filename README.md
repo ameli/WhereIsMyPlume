@@ -28,6 +28,11 @@ _Method:_ This code reconstructs a full spatio-temporal velocity field of the oc
   You can install these packages, for instance, with anaconda by
   
       sudo conda install -c conda-forge jupyter numpy scipy matplotlib basemap
+
+  Alternatively, the above packages may be installed by pip via
+
+      cd WhereIsMyPlume
+      sudo pip install requirements.txt
   
   Also, install Matlab engine for Python by
   
