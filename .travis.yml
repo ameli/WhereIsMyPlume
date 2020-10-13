@@ -1,7 +1,0 @@
-language: matlab
-
-matlab:
-    - latest
-
-script:
-    - matlab -batch "r = runtests('IncludeSubfolders',true); assert(~isempty(r)); assertSuccess(r)"

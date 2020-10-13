@@ -1,15 +1,20 @@
 # WhereIsMyPlume
 
 * [Homepage](homepage)
-* Travis-CI [unit-tests](https://travis-ci.org/SheffieldML/GPy)
 * [![licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
 
 ### Description
 
 You are on a boat in the middle of nowhere ocean. You lost the treasure map which was in a bottle, and now it is floating somewhere. Fortunately, your boat comes with with an [acoustic Doppler current profiler](https://en.wikipedia.org/wiki/Acoustic_Doppler_current_profiler). Using the ocean current measurements, this code guides you to the location of the drifting bottle.
 
+### Requirements
 
+Matlab 2017a and later with the following toolbox are required:
+
+* Statistics toolbox
+* Econometrics toolbox
+* Financial toolbox
+* Map toolbox
 
 ### Download the code
 
@@ -30,12 +35,9 @@ You are on a boat in the middle of nowhere ocean. You lost the treasure map whic
 
         matlab -nodekstop -nosplash
 
-2. Change the current directory of Matlab to the folder containing the repository
+2. The main script of the code is `WhereIsMyPlume.m` and accepts a configuration file to configure how the code should run. The configuration. Some sample configuration files can be found in `config` directory. As an example, run the code with the configuration given in `/config/config_subsurface.m` file by
 
         cd WhereIsMyPlume
-
-3. The main script of the code is `WhereIsMyPlume.m`, and accepts a configuration file to configure how the code should run. The configuration. Some sample configuration files can be found in `config` directory. As an example, run the code with the configuration given in `/config/config_subsurface.m` file by
-
         WhereIsMyPlume 'config_subsurface'
 
    After the code is finished, the resulted `mat` files will be written to the directory `log`. The plots will be written to the directory `output`.
@@ -61,7 +63,7 @@ You are on a boat in the middle of nowhere ocean. You lost the treasure map whic
 ### Acknowledgements
 
 * This work was supported by National Science Foundation award number [1520825](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1520825).
-* The script `src/rdradcp.m` to read ADCP data files is written by [Rich Pawlowicz](http://www.eoas.ubc.ca/~rich/).
+* The script `/src/rdradcp.m`, which reads the raw ADCP data files, is written by [Rich Pawlowicz](http://www.eoas.ubc.ca/~rich/).
 
 ### How to cite
 
