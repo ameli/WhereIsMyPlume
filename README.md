@@ -9,20 +9,39 @@ You are on a boat in the middle of nowhere ocean. You lost the treasure map whic
 
 ### Requirements
 
-Matlab 2017a and later with the following toolbox are required:
+Matlab 2017a or later with the following toolboxes are required:
 
 * Statistics toolbox
 * Econometrics toolbox
 * Financial toolbox
-* Map toolbox
+* Mapping toolbox
 
-### Download the code
+To reproduce the output plots in python (_optional_, you may not need this step), a Jupyter noteook and the following python packages are required:
+
+* numpy
+* scipy
+* matplotlib
+* basemap
+* matlab engine
+
+You can install these packages, for instance, with anaconda by
+
+    sudo conda install -c conda-forge jupyter numpy scipy matplotlib basemap
+
+and install matlab engine by
+
+    cd matlabroot/extern/engines/python
+    sudo python setup.py install
+
+In the above, `matlabroot` is the directory where Matlab is installed.
+
+### Download the code and data
 
 1. Clone the repository:
 
         git clone https://github.com/ameli/WhereIsMyPlume.git
 
-2. The cloned repository contains the directory `data` which is an empty folder. Download the [actual data files](http://transport.me.berkeley.edu/thredds/fileServer/trajectories/FieldExperiment-2018/data.tar.gz) (650 MB) to replace with the empty `data` directory in the repository. You may do so either manually or by the following commands:
+2. The cloned repository contains the directory [`data`](https://github.com/ameli/WhereIsMyPlume/tree/master/data) which is an empty folder. Download the [actual data files](http://transport.me.berkeley.edu/thredds/fileServer/trajectories/FieldExperiment-2018/data.tar.gz) (650 MB) to replace with the empty `data` directory in the repository. You may do so either manually or by the following commands:
 
         cd WhereIsMyPlume
         wget http://transport.me.berkeley.edu/thredds/fileServer/trajectories/FieldExperiment-2018/data.tar.gz
@@ -35,29 +54,29 @@ Matlab 2017a and later with the following toolbox are required:
 
         matlab -nodekstop -nosplash
 
-2. The main script of the code is [`WhereIsMyPlume.m`](https://github.com/ameli/WhereIsMyPlume/blob/master/WhereIsMyPlume.m) and accepts a configuration file to configure how the code should run. Some sample configuration files can be found in `config` directory. As an example, run the code with the configuration given in [`/config/config_subsurface.m`](https://github.com/ameli/WhereIsMyPlume/blob/master/config/config_subsurface.m) file by
+2. The main script of the code is [`WhereIsMyPlume.m`](https://github.com/ameli/WhereIsMyPlume/blob/master/WhereIsMyPlume.m) and accepts an input configuration file to configure how the code should run. Some sample configuration files can be found in [`config`](https://github.com/ameli/WhereIsMyPlume/tree/master/config) directory. As an example, run the code with the configuration given in [`/config/config_subsurface.m`](https://github.com/ameli/WhereIsMyPlume/blob/master/config/config_subsurface.m) by
 
         cd WhereIsMyPlume
         WhereIsMyPlume 'config_subsurface'
 
    After the code is finished, the resulted `mat` files will be written to the directory `log`. The plots will be written to the directory `output`.
 
-4. For publication quality plots, run the jupyter notebook script in `python` directory. This should be done after the matlab code is executed which generates the output data in `/python/data`. These data will be used by the python script to reproduce the plots.
+4. For publication quality plots, run the jupyter notebook script in [`python`](https://github.com/ameli/WhereIsMyPlume/tree/master/python) directory. This should be done after the matlab code is executed which generates the output data in [`/python/data`](https://github.com/ameli/WhereIsMyPlume/tree/master/python/data). These data will be used by the python script to reproduce the plots.
 
 ### Directory Structure
 
 | Directory/File | Purpose |
 | -------------- | ------- |
 | [`/config`](https://github.com/ameli/WhereIsMyPlume/tree/master/config) | Examples of configuration files are stored here. A configuration file is used as an argument to the main script. |
-| `/data` | Includes adcp data, ship tracks, drifter data, and wind data. The user data can be any other directory, provided that the data directory is set in config file. |
-| `/doc` | Documentation files, such as output images. |
-| `/log` | Both input and output `mat` files are stored here. If an input log file exists, the code will use it in the next, otherwise, the code generates a new log file. |
-| `/output` | Stores all plots as an output of the code. |
-| `/python` | Python scripts to reproduce the plots with a better quality (than Matlab) for publication purposes only. |
-| `/src` | Source code `m` files. |
-| `/test` | Scripts to be run by continuous integration, Travis. |
-| `/utilities` | Directory containing scripts that are not a part of the package, but useful, in particular, for data files conversion and plots. |
-| `WhereIsMyPlume.m` | Main script (runner) of the package. This script runs the codes in `/src` directory. |
+| [`/data`](https://github.com/ameli/WhereIsMyPlume/tree/master/data) | Includes adcp data, ship tracks, drifter data, and wind data. The user data can be any other directory, provided that the data directory is set in config file. |
+| [`/doc`](https://github.com/ameli/WhereIsMyPlume/tree/master/doc) | Documentation files, such as output images. |
+| [`/log`](https://github.com/ameli/WhereIsMyPlume/tree/master/log) | Both input and output `mat` files are stored here. If an input log file exists, the code will use it in the next, otherwise, the code generates a new log file. |
+| [`/output`](https://github.com/ameli/WhereIsMyPlume/tree/master/output) | Stores all plots as an output of the code. |
+| [`/python`](https://github.com/ameli/WhereIsMyPlume/tree/master/python) | Python scripts to reproduce the plots with a better quality (than Matlab) for publication purposes only. |
+| [`/src`](https://github.com/ameli/WhereIsMyPlume/tree/master/src) | Source code `m` files. |
+| [`/test`](https://github.com/ameli/WhereIsMyPlume/tree/master/test) | Scripts to be run by continuous integration, Travis. |
+| [`/utilities`](https://github.com/ameli/WhereIsMyPlume/tree/master/utilities) | Directory containing scripts that are not a part of the package, but useful, in particular, for data files conversion and plots. |
+| [`WhereIsMyPlume.m`](https://github.com/ameli/WhereIsMyPlume/blob/master/WhereIsMyPlume.m) | Main script (runner) of the package. This script runs the codes in `/src` directory. |
 
 
 ### Acknowledgements
